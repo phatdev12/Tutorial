@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button onmouseleave="leave()" onmouseenter="hover()" class="btn">Click me</button>
+        <div class="text-container" style="opacity: 0; height: 0; margin-top: 110px; transition: 0.8s;">
+            <p ondrag="return false" class="text">Click me button to give your text</p>
+        </div>
+    </div>
+    <script>
+        const element = document.querySelector('.btn')
+        const text = document.querySelector(".text-container")
+        function hover(){
+            text.style.opacity = "1"
+            text.style.height = "120px"
+            text.style.marginTop = "110px"
+        }
+        function leave(){
+            text.style.opacity = "0"
+            text.style.height = "0"
+            text.style.marginTop = "0"
+        }
+    </script>
+</body>
+</html>
